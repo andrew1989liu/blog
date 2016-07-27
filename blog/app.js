@@ -7,7 +7,11 @@ var bodyParser = require('body-parser');
 
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
+
+var flash = require('connect-flash');
+
 var app = express();
+
 app.use(session({
   secret: 'hahah',
   key: 'blog',//cookie name
@@ -25,6 +29,9 @@ var users = require('./routes/users');
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
+
+app.use(flash());
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
