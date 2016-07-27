@@ -6,11 +6,11 @@ var router = express.Router();
 //   res.render('index', { title: 'Express' });
 // });
 router.get('/',function(req,res){
-	res.render('index',{title 'home'});
+	res.render('index',{title: 'home'});
 });
 
 router.get('/reg',function(req,res){
-	res.render('reg',{title 'register'});
+	res.render('reg',{title: 'register'});
 });
 
 router.post('/reg',function(req,res){
@@ -18,14 +18,14 @@ router.post('/reg',function(req,res){
 });
 
 router.get('/login',function(req,res){
-	res.render('login',{title 'login'});
+	res.render('login',{title: 'login'});
 });
 
 router.post('/login',function(req,res){
 });
 
 router.get('/post',function(req,res){
-	res.render('post',{title 'login'});
+	res.render('post',{title: 'login'});
 });
 
 router.post('/post',function(req,res){
